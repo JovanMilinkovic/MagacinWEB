@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\Backend\\Backend.csproj": {}
+    "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\Backend\\Backend.csproj": {
+    "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\Backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\chico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\chico\\OneDrive\\Desktop\\projektiFaks\\webMagacin\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chico\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,24 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"

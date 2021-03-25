@@ -1,0 +1,21 @@
+body
+{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 29%, rgba(157,156,167,1) 100%);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.magacinForma
+{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1300px;
+    text-align: center;
+    border: 3px solid black;
+    height: 400px;
+    width: 250px;
+}
