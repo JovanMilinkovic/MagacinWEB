@@ -38,7 +38,7 @@ namespace Backend.Controllers
         [HttpPut]
         public async Task<IActionResult> IzmeniMagacin([FromBody] Magacin magacin)
         {
-            if(Context.Magacini.Any(p => p.Ime==magacin.Ime && p.Kapacitet==magacin.Kapacitet && p.N==magacin.N && p.M==magacin.M))
+            if(Context.Magacini.Any(p => p.Ime==magacin.Ime && p.Kapacitet==magacin.Kapacitet && p.N==magacin.N))
                 return StatusCode(406);
 
             if(magacin.Ime==null || magacin.Kapacitet==0)
@@ -57,11 +57,8 @@ namespace Backend.Controllers
         {
             if(Context.Magacini.Any(p => p.ID==id))
             {
-                var nizRafova = Context.Rafovi.Where(r => r.Magacin.ID==id);
-                await nizRafova.ForEachAsync(r => {
-                Context.Remove(r);
-                });
-                var magacin = await Context.Magacini.FindAsync(id);
+                var magacin = Context.Magacini.Include(p=>p.Rafovi).ThenInclude(p=>p.Mesta).Where(r => r.ID==id).FirstOrDefault();
+                
                 Context.Remove(magacin);
                 await Context.SaveChangesAsync();
                 return Ok();
@@ -136,7 +133,7 @@ namespace Backend.Controllers
             var raf = await Context.Rafovi.FindAsync(idRafa);
             mesto.Raf=raf;
 
-            if (mesto.Kapacitet == 0 || mesto.MaxKapacitet == 0)
+            if (mesto.Kolicina == 0 || mesto.MaxKolicina == 0)
             {
                 return StatusCode(406);
             }
@@ -153,7 +150,7 @@ namespace Backend.Controllers
         [HttpPut]
         public async Task<IActionResult> IzmeniMesto([FromBody] Mesto mesto)
         {
-            if (mesto.Kapacitet == 0 || mesto.MaxKapacitet == 0)
+            if (mesto.Kolicina == 0 || mesto.MaxKolicina == 0)
                 return StatusCode(406);
             else
             {

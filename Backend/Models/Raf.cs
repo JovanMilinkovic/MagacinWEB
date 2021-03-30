@@ -24,6 +24,9 @@ namespace Backend.Models
         [Column("Kapacitet")]
         public int Kapacitet { get; set; }
 
+        [Column("X")]
+        public int X { get; set; }
+
         public virtual List<Mesto> Mesta { get; set; }
 
         [JsonIgnore]

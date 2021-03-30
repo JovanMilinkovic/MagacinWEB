@@ -9,17 +9,14 @@ namespace Backend.Models
         [Column("ID mesta")]
         public int ID { get; set; }
 
-        [Column("Kapacitet")]
-        public int Kapacitet { get; set; }
+        [Column("Kolicina")]
+        public int Kolicina { get; set; }
         
-        [Column("MaxKapacitet")]
-        public int MaxKapacitet { get; set; }
+        [Column("MaxKolicina")]
+        public int MaxKolicina { get; set; }
 
         [Column("X")]
         public int X { get; set; }
-
-        [Column("Y")]
-        public int Y { get; set; }
 
         [JsonIgnore]
         public Raf Raf { get; set; }

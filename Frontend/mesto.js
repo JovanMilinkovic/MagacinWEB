@@ -1,11 +1,10 @@
 import {Raf} from "./raf.js";
 export class Mesto{
-    constructor(i, j, kapacitet, maxKapacitet)
+    constructor(i, kolicina, maxKolicina)
     {
         this.x=i;
-        this.y=j;
-        this.kapacitet=0;
-        this.maxKapacitet=maxKapacitet;
+        this.kolicina=1;
+        this.maxKolicina=maxKolicina;
         this.miniKontejner=null;
     }
 }

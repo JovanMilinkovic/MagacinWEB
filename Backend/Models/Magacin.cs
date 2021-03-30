@@ -21,10 +21,6 @@ namespace Backend.Models
 
         [Column("Dimenzija N")]
         public int N { get; set; }
-
-        [Column("Dimenzija M")]
-        public int M { get; set; }
-
         public virtual List<Raf> Rafovi { get; set; }
     }
 }
